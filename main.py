@@ -6,13 +6,20 @@ import models, schemas, auth
 
 from auth import create_access_token, hash_password, verify_password, oauth2_scheme, decode_access_token
 
-models.Base.metadata.create_all(bind=engine)
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Somnio AI Journaling API",
     description="An AI-powered journaling API with authentication.",
     version="1.0.0"
 )
+
+
+
+
+models.Base.metadata.create_all(bind=engine)
+
+
 
 def get_db():
     db = SessionLocal()
