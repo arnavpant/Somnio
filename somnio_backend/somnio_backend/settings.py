@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     # Your app(s)
     'accounts',
+    'journal',
 ]
 
 
@@ -72,6 +73,13 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = "somnio_backend.urls"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
 
 TEMPLATES = [
     {
