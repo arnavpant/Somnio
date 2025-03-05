@@ -1,0 +1,85 @@
+/* The entire page background */
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #004d70;
+}
+
+/* Content area (beside the sidebar) */
+.content {
+  flex: 1;
+  padding: 2rem;
+  background-color: transparent; /* Let the page background show through */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Editable title input styled like a heading */
+.journalTitleInput {
+  width: 95%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  padding-top: 3%;
+  margin-bottom: 1rem;
+}
+
+/* Auto-resizing textarea for content */
+.journalContent {
+  width: 97%;
+  background-color: #005a7a;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #fff;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 2rem;
+  white-space: pre-wrap;
+  resize: none;
+  overflow: hidden;
+  padding: clamp(0.5rem, 2vw, 0.75rem);
+  line-height: 1.4;
+}
+
+/* Save button styling */
+.saveButton {
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.saveButton:hover {
+  background-color: #005bb5;
+}
+
+/* Error and loading messages */
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+/* Form container for the button (to avoid nested onClick issues) */
+.form {
+  width: 90vw;
+  max-width: 600px;
+  text-align: center;
+}

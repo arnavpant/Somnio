@@ -1,0 +1,47 @@
+.sidebar {
+  background-color: #333;
+  color: #fff;
+  width: 60px; /* Collapsed width */
+  transition: width 0.3s ease;
+  overflow: hidden; /* Hide overflowing content */
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+/* Expand sidebar on hover */
+.sidebar:hover {
+  width: 200px; /* Expanded width */
+}
+
+/* Menu items styling */
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.menuItem:hover {
+  background-color: #444;
+}
+
+/* Icon styling - always visible */
+.icon {
+  margin-right: 0.5rem;
+}
+
+/* Label styling - hidden by default via opacity */
+.label {
+  font-size: 1rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* When sidebar is hovered, reveal the label */
+.sidebar:hover .label {
+  opacity: 1;
+}

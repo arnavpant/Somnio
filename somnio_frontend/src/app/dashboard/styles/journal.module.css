@@ -1,0 +1,104 @@
+/* Container for the entire page: Sidebar + content */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Content area: occupies remaining space */
+.content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #004d70;
+  position: relative; /* Allows the floating new entry button to be positioned */
+  overflow-y: auto;
+}
+
+/* Page title styling */
+.pageTitle {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Search bar styling */
+.searchBar {
+  color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: clamp(0.5rem, 2vw, 0.75rem);
+  border: 3px solid #004260;
+  border-radius: 8px;
+  margin: 0 auto 2rem auto;
+  display: block;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+/* Journal list container */
+.journalList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Journal card styling */
+.journalCard {
+  background: #115879;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Editable journal title styling */
+.journalTitle {
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  margin-bottom: 0.5rem;
+}
+
+/* Journal date/time styling */
+.journalDate {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: #fff;
+}
+
+/* No journals message */
+.noJournals {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #fff;
+}
+
+/* Floating new entry button on bottom right */
+.newEntryButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0070f3;
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.newEntryButton:hover {
+  background-color: #005bb5;
+}

@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 2rem;
+    background-color: #004d70; /* a light purple background */
+    overflow-y: auto;
+  }
+  
+  /* Styling for the logout button with responsive sizing */
+  .logoutBtn {
+    background-color: #c51162;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: clamp(0.75rem, 2vw, 1rem);
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .logoutBtn:hover {
+    background-color: #880e4f;
+  }
+  
+  /* Optional: Style the heading */
+  .content h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  
