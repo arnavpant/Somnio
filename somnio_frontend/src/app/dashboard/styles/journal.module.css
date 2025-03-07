@@ -1,86 +1,165 @@
-/* Container for the entire page: Sidebar + content */
+/* Container for the entire page with sidebar */
 .container {
   display: flex;
   height: 100vh;
+  background-color: #004d70;
 }
 
-/* Content area: occupies remaining space */
+/* Content area (beside the sidebar) */
 .content {
   flex: 1;
   padding: 2rem;
-  background-color: #004d70;
-  position: relative; /* Allows the floating new entry button to be positioned */
+  background-color: transparent;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Page title styling */
 .pageTitle {
-  color: white;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 3rem);
-  text-align: center;
+  color: #fff;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* Search bar styling */
 .searchBar {
-  color: white;
-  width: 100%;
+  width: 90vw;
   max-width: 600px;
   padding: clamp(0.5rem, 2vw, 0.75rem);
-  border: 3px solid #004260;
-  border-radius: 8px;
-  margin: 0 auto 2rem auto;
-  display: block;
+  margin-bottom: 2rem;
   font-size: clamp(0.8rem, 2vw, 1rem);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* No journals message styling */
+.noJournals {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #ccc;
 }
 
 /* Journal list container */
 .journalList {
+  width: 90vw;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
 /* Journal card styling */
 .journalCard {
-  background: #115879;
-  padding: 1rem;
+  background-color: #004d70; /* default background */
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.journalCard:hover {
+  background-color: #00344c; /* slightly darker on hover */
+}
+
+
+/* Card content wrapper */
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+}
+
+/* Card text (title and date) */
+.cardText {
+  flex: 1;
+}
+
+/* Journal title in card */
+.journalTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  border: none;
+  background: transparent;
+  color: rgb(256, 256, 256, 0.8);
+}
+
+/* Journal date styling */
+.journalDate {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: #666;
+}
+
+/* Card menu container */
+.cardMenu {
+  position: relative;
+}
+
+/* Updated menu button styling: circle around the triple dots */
+.menuButton {
+  background-color: rgba(255, 255, 255, 0.1); /* light translucent background */
+  border: none;
+  border-radius: 50%;  /* make it a circle */
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #fff;  /* light white color */
+}
+
+.menuButton:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dropdown menu styling remains the same */
+.menuDropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
   display: flex;
   flex-direction: column;
 }
 
-/* Editable journal title styling */
-.journalTitle {
-  color: #fff;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
+.menuDropdown button {
+  background: none;
   border: none;
-  background: transparent;
-  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
 }
 
-/* Journal date/time styling */
-.journalDate {
-  font-size: clamp(0.8rem, 2vw, 1rem);
-  color: #fff;
+.menuDropdown button:hover {
+  background-color: #f0f0f0;
 }
 
-/* No journals message */
-.noJournals {
-  text-align: center;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #fff;
-}
-
-/* Floating new entry button on bottom right */
+/* Floating new entry button */
 .newEntryButton {
   position: fixed;
   bottom: 30px;
