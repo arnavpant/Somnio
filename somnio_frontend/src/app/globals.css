@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+:root {
+  --global-bg-color: #004d70; /* default background color */
+  --journal-font: 'Inter', sans-serif; /* default font for journal entries */
+}
+
+/* Then, in your CSS for pages, use these variables */
+body {
+  background-color: var(--global-bg-color);
+}
+
+/* For example, in your Journal page CSS, set the font-family using the variable */
+.journalEntry {
+  font-family: var(--journal-font);
+}
+
+
 
 
 

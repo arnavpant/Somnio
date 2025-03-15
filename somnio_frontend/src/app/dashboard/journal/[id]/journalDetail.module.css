@@ -2,7 +2,7 @@
 .container {
   display: flex;
   height: 100vh;
-  background-color: #004d70;
+  background-color: var(--global-bg-color);
 }
 
 /* Content area (beside the sidebar) */
@@ -34,7 +34,7 @@
 /* Auto-resizing textarea for content */
 .journalContent {
   width: 97%;
-  background-color: #005a7a;
+  background-color: var(--global-bg-color);
   border: 1px solid #ccc;
   border-radius: 8px;
   color: #fff;
@@ -50,7 +50,7 @@
 
 /* Save button styling */
 .saveButton {
-  background-color: #0070f3;
+  background-color: var(--global-bg-color);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -61,7 +61,7 @@
 }
 
 .saveButton:hover {
-  background-color: #005bb5;
+  background-color: var(--global-bg-color);
 }
 
 /* Error and loading messages */

@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # Your app(s)
-    'accounts',
+    'accounts.apps.AccountsConfig',
     'journal',
 ]
 

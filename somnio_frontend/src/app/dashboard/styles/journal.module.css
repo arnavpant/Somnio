@@ -2,7 +2,7 @@
 .container {
   display: flex;
   height: 100vh;
-  background-color: #004d70;
+  background-color: var(--global-bg-color);
 }
 
 /* Content area (beside the sidebar) */
@@ -62,7 +62,7 @@
 
 /* Journal card styling */
 .journalCard {
-  background-color: #004d70; /* default background */
+  background-color: var(--global-bg-color); /* default background */
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -73,7 +73,7 @@
 }
 
 .journalCard:hover {
-  background-color: #00344c; /* slightly darker on hover */
+  background-color: var(--global-bg-color); 
 }
 
 

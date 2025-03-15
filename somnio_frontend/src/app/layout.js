@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header"; // Import the header component
+import Header from "./components/Header"; // Your Header component
+import BackgroundUpdater from "./components/BackgroundUpdater"; // Client component
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Header /> {/* This will render your date/time header on every page */}
+        <Header /> {/* Global header */}
+        <BackgroundUpdater /> {/* This updates CSS variables based on user settings */}
         {children}
       </body>
     </html>

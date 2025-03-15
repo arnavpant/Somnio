@@ -2,9 +2,10 @@
 .container {
     display: flex;
     height: 100vh;
-    background-color: #004d70;
+    background-color: var(--global-bg-color);
   }
   
+
   /* Content area (beside the sidebar) */
   .content {
     flex: 1;
@@ -50,7 +51,7 @@
   /* Journal content box styling */
   .journalContent {
     width: 97%;
-    background-color: #005a7a; /* Slightly lighter than page background */
+    background-color: var(--global-bg-color); /* Slightly lighter than page background */
     border: 1px solid #ccc;
     border-radius: 8px;
     color: #fff;

@@ -6,7 +6,7 @@
   .content {
     flex: 1;
     padding: 2rem;
-    background-color: #004d70; /* a light purple background */
+    background-color: var(--global-bg-color); /* a light purple background */
     overflow-y: auto;
   }
   
@@ -18,7 +18,7 @@
     border-radius: 8px;
     padding: clamp(0.75rem, 2vw, 1rem);
     cursor: pointer;
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: clamp(0.8rem, 2vw, 1rem); 
     margin-bottom: 1rem;
     transition: background-color 0.2s ease;
   }

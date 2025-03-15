@@ -1,0 +1,112 @@
+/* Container for the entire page with sidebar */
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #004d70; /* Page background */
+  }
+  
+  /* Content area (beside the sidebar) */
+  .content {
+    flex: 1;
+    padding: 2rem;
+    background-color: transparent; /* Let the page background show through */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Page title styling */
+  .pageTitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form styling */
+  .form {
+    width: 90vw;
+    max-width: 600px;
+    background-color: #005a7a; /* Slightly lighter than page background */
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Field styling */
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* Label styling */
+  .label {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Input styling */
+  .input {
+    padding: clamp(0.5rem, 2vw, 0.75rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Select styling */
+  .select {
+    padding: clamp(0.5rem, 2vw, 0.75rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Color input styling */
+  .colorInput {
+    padding: 0.2rem;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  /* Save button styling */
+  .saveButton {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: clamp(0.75rem, 2vw, 1rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .saveButton:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Message and error styling */
+  .message {
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
